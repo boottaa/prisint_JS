@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14.09.2015, 18:49:26
+    Author     : ahmedovba
+*/
+
+body, *{
+    background: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.content{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background: white;
+}
+
+.view{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.block{
+    background: none;
+    padding: 10px;
+    position: absolute;
+    min-width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0px;
+    transition: 1s;
+}
+
+.navigation{
+    position: absolute;
+    right: 5%;
+    top: 75%;
+    transform: translateY(-100%);
+    display: block;
+}
+
+.navigation>.btn{
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navigation>.btn_back{
+    border-top:    15px solid transparent;
+    border-right:  30px solid red;
+    border-bottom: 15px solid transparent;
+}
+.navigation>.btn_next{
+    border-top:    15px solid transparent;
+    border-left:   30px solid red;
+    border-bottom: 15px solid transparent;
+}
+.navigation>.btn_down{
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid red;
+    top: 45px;
+}
+
+.navigation>.btn_up{
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid red;
+    left: 62px;
+    bottom: 45px;
+}
+
+.navigation>.btn:hover{
+    opacity: 0.8;
+}
+.navigation>.btn_back:active{
+    box-shadow: 3px 0px 0px black;
+}
+.navigation>.btn_down:active{
+    box-shadow: 0px -3px 0px black;
+}
+.navigation>.btn_next:active{
+    box-shadow: -3px 0px 0px black;
+}
+.navigation>.btn_up:active{
+    box-shadow: 0px 3px 0px black;
+}
+
+.navigation>.btn_next:disabled{
+    border-color: rgba(0, 0, 0, 0.0);
+    box-shadow: none;
+}
+.navigation>.btn_down:disabled{
+    border-color: rgba(0, 0, 0, 0.0);
+    box-shadow: none;
+}.navigation>.btn_up:disabled{
+    border-color: rgba(0, 0, 0, 0.0);
+    box-shadow: none;
+}
+.navigation>.btn_back:disabled{
+    border-color: rgba(0, 0, 0, 0.0);
+    box-shadow: none;
+}
+
+
+.now{
+    left: 0%;
+}
+
+.back{
+    left: -150%;
+}
+
+.next{
+    left: 150%;
+}
+
+section{
+    transition: 0.7s;
+    opacity: 0;
+}
